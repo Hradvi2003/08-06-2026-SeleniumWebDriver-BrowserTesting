@@ -7,7 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
 public class LaunchDiffrerentBrowsers {
-	@Test
+	@Test 
 	public void ChromeBrowserTest() {
 		WebDriver driver = new ChromeDriver();  
 		driver.get( "https://www.selenium.dev/downloads/");
@@ -23,7 +23,11 @@ public class LaunchDiffrerentBrowsers {
 	public void FirefoxBrowserTest() {
 		WebDriver driver = new FirefoxDriver(); 
 		driver.get( "https://www.selenium.dev/downloads/");
-		driver.manage().window().maximize();
+		driver.manage().window().maximize();String Title = driver.getTitle();
+		System.out.println(Title);
+		String URL = driver.getCurrentUrl();
+		System.out.println(URL);
+		 // driver.quit();
 
 		
 	}
@@ -32,7 +36,11 @@ public class LaunchDiffrerentBrowsers {
 	public void EdgeBrowserTest() {
 		WebDriver driver = new EdgeDriver();
 		 driver.get( "https://www.selenium.dev/downloads/");
-		 driver.manage().window().maximize();
+		 driver.manage().window().maximize();String Title = driver.getTitle();
+		System.out.println(Title);
+		String URL = driver.getCurrentUrl();
+		System.out.println(URL);
+		 // driver.quit();
 
 	}
 	 
